@@ -4,7 +4,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 COPY . /app
-RUN cargo build --release
+RUN cargo build --release --target x86_64-unknown-linux-musl
 
 # runtime stage
 FROM scratch
